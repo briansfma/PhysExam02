@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <org.centum.android.ecg.utils.styledviews.RobotLightTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/title_textView"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:text="@string/patient_details"
+            android:paddingTop="8dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textSize="26sp"
+            android:paddingBottom="8dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="7"
+            android:id="@+id/first_editText"
+            android:hint="@string/first_name"
+            android:layout_below="@+id/editText3"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="8dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:id="@+id/last_editText"
+            android:hint="@string/last_name"
+            android:layout_alignTop="@+id/first_editText"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="8dp"
+            android:layout_toRightOf="@+id/first_editText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText3"
+            android:text="@string/name"
+            android:textSize="10sp"
+            android:textColor="@color/edit_text_float_label"
+            android:layout_alignLeft="@+id/first_editText"
+            android:layout_alignStart="@+id/first_editText"
+            android:layout_alignRight="@+id/last_editText"
+            android:layout_alignEnd="@+id/last_editText"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/title_textView" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/notes"
+            android:textSize="10sp"
+            android:textColor="@color/edit_text_float_label"
+            android:hint="Extra information"
+            android:id="@+id/patients_tab"
+            android:layout_alignLeft="@+id/notes_editText"
+            android:layout_alignStart="@+id/notes_editText"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/dob_editText" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/notes_editText"
+            android:hint="Extra information"
+            android:layout_alignLeft="@+id/dob_editText"
+            android:layout_alignStart="@+id/dob_editText"
+            android:layout_below="@+id/patients_tab"
+            android:layout_alignRight="@+id/last_editText"
+            android:layout_alignEnd="@+id/last_editText" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/notes_editText">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="4dip"
+                android:layout_marginRight="4dip"
+                android:background="?android:attr/dividerVertical" />
+
+            <View
+                android:id="@+id/ViewColorPickerHelper"
+                android:layout_width="1dip"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="4dip"
+                android:layout_marginTop="4dip"
+                android:background="?android:attr/dividerVertical" />
+
+            <Button
+                android:id="@+id/cancel_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@id/ViewColorPickerHelper"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="@android:string/cancel" />
+
+            <Button
+                android:id="@+id/save_button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@id/ViewColorPickerHelper"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="@string/save" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/label_0"
+            android:text="@string/dob"
+            android:textSize="10sp"
+            android:textColor="@color/edit_text_float_label"
+            android:layout_below="@+id/first_editText"
+            android:layout_alignLeft="@+id/first_editText"
+            android:layout_alignStart="@+id/first_editText" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="7"
+            android:id="@+id/dob_editText"
+            android:layout_below="@+id/label_0"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toStartOf="@+id/last_editText"
+            android:layout_toLeftOf="@+id/last_editText" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="F"
+            android:id="@+id/female_checkBox"
+            android:layout_alignTop="@+id/dob_editText"
+            android:layout_alignRight="@+id/notes_editText"
+            android:layout_alignEnd="@+id/notes_editText"
+            android:checked="false"
+            android:layout_above="@+id/patients_tab" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="M"
+            android:id="@+id/male_checkBox"
+            android:layout_above="@+id/patients_tab"
+            android:layout_toLeftOf="@+id/female_checkBox"
+            android:layout_toStartOf="@+id/female_checkBox"
+            android:layout_below="@+id/label_0"
+            android:checked="true" />
+
+    </RelativeLayout>
+</ScrollView>

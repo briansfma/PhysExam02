@@ -1,0 +1,149 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:id="@+id/ParentLayout">
+
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:id="@+id/BackgroundLayout"
+        android:layout_alignParentBottom="false"
+        android:layout_alignEnd="@+id/BackButton"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="100dp">
+
+        <ImageView
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/BackgroundImage"
+            android:background="@drawable/anatomicalmodel"
+            android:adjustViewBounds="false"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+    </FrameLayout>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Eyes"
+        android:id="@+id/EyesButton"
+        android:layout_marginTop="96dp"
+        android:layout_marginStart="231dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/NeckButton" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chest"
+        android:id="@+id/ChestButton"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="51dp"
+        android:layout_below="@+id/NeckButton"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Neck"
+        android:id="@+id/NeckButton"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="22dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Leg and Knees"
+        android:id="@+id/LegandKneesButton"
+        android:layout_below="@+id/HandsButton"
+        android:layout_alignStart="@+id/ChestButton"
+        android:layout_marginTop="81dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hands"
+        android:id="@+id/HandsButton"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/LegandKneesButton" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Abdomen"
+        android:id="@+id/AbdomenButton"
+        android:layout_alignTop="@+id/HandsButton"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:id="@+id/BackButton"
+        android:layout_below="@+id/ChestButton"
+        android:layout_alignStart="@+id/AbdomenButton" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Foot"
+        android:id="@+id/FootButton"
+        android:layout_below="@+id/LegandKneesButton"
+        android:layout_alignStart="@+id/AbdomenButton"
+        android:layout_marginTop="57dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thinking and Balance"
+        android:id="@+id/ThinkingandBalanceButton"
+        android:layout_marginStart="94dp"
+        android:layout_alignBaseline="@+id/LegandKneesButton"
+        android:layout_alignBottom="@+id/LegandKneesButton"
+        android:layout_toEndOf="@+id/AbdomenButton" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nondescript"
+        android:id="@+id/NondescriptButton"
+        android:layout_alignTop="@+id/FootButton"
+        android:layout_alignEnd="@+id/ThinkingandBalanceButton" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Skin"
+        android:id="@+id/SkinButton"
+        android:layout_below="@+id/FootButton"
+        android:layout_toStartOf="@+id/FootButton"
+        android:layout_marginEnd="107dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hair"
+        android:id="@+id/HairButton"
+        android:layout_above="@+id/NeckButton"
+        android:layout_alignEnd="@+id/SkinButton" />
+
+</RelativeLayout>
